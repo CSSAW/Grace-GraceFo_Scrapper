@@ -1,0 +1,36 @@
+
+{
+  "username": "qinz",
+  "password": "1y@0g8BKgJUkTBCq@9N",
+  "query": [
+      {
+          "compact":false,
+          "datasetId":"PODAAC-GFLND-3AJ63",
+          "bbox":"16.33, -47.18,38.29,-22.123",
+          "variables" : ["lon", "lat", "time", "lat_bounds", "lon_bounds", "time_bounds", "lwe_thickness"],
+          "granuleIds": [
+                        "GRD-3_2018152-2018181_GRFO_JPLEM_BA01_0600_LND_v03.nc",
+                        "GRD-3_2018182-2018199_GRFO_JPLEM_BA01_0600_LND_v03.nc", 
+                        "GRD-3_2018295-2018313_GRFO_JPLEM_BA01_0600_LND_v03.nc", 
+                        "GRD-3_2018305-2018334_GRFO_JPLEM_BA01_0600_LND_v03.nc",
+                        "GRD-3_2018335-2018365_GRFO_JPLEM_BA01_0600_LND_v03.nc", 
+                        "GRD-3_2019001-2019031_GRFO_JPLEM_BA01_0600_LND_v03.nc", 
+                        "GRD-3_2019026-2019063_GRFO_JPLEM_BA01_0600_LND_v03.nc", 
+                        "GRD-3_2019060-2019090_GRFO_JPLEM_BA01_0600_LND_v03.nc", 
+                        "GRD-3_2019091-2019120_GRFO_JPLEM_BA01_0600_LND_v03.nc", 
+                        "GRD-3_2019121-2019151_GRFO_JPLEM_BA01_0600_LND_v03.nc", 
+                        "GRD-3_2019152-2019181_GRFO_JPLEM_BA01_0600_LND_v03.nc", 
+                        "GRD-3_2019182-2019212_GRFO_JPLEM_BA01_0600_LND_v03.nc", 
+                        "GRD-3_2019213-2019243_GRFO_JPLEM_BA01_0600_LND_v03.nc", 
+                        "GRD-3_2019244-2019273_GRFO_JPLEM_BA01_0600_LND_v03.nc", 
+                        "GRD-3_2019274-2019304_GRFO_JPLEM_BA01_0600_LND_v03.nc", 
+                        "GRD-3_2019305-2019334_GRFO_JPLEM_BA01_0600_LND_v03.nc", 
+                        "GRD-3_2019335-2019365_GRFO_JPLEM_BA01_0600_LND_v03.nc", 
+                        "GRD-3_2020001-2020031_GRFO_JPLEM_BA01_0600_LND_v03.nc", 
+                        "GRD-3_2020032-2020060_GRFO_JPLEM_BA01_0600_LND_v03.nc",
+                        "GRD-3_2020061-2020091_GRFO_JPLEM_BA01_0600_LND_v03.nc",
+                        "GRD-3_2020092-2020121_GRFO_JPLEM_BA01_0600_LND_v03.nc"
+                        ]
+      }
+   ]
+ }
