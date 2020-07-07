@@ -5,6 +5,7 @@ import csv
 
 
 def readNC(file_path, lat_max, lat_min, lon_max, lon_min):
+	current_dir = "/Users/kylechin/Grace-GraceFo_Scrapper/lwe_data/"
 	file = nc.Dataset(file_path, mode="r")
 	source_name = file_path.split(".")[0].split("/")
 	source_name = source_name[len(source_name)-1]
@@ -20,11 +21,7 @@ def readNC(file_path, lat_max, lat_min, lon_max, lon_min):
 	time = file.variables["time"]
 	dtime = nc.num2date(time[:], time.units)
 	print(file["lwe_thickness"].dimensions)
-	# for i in range(lwe.size):
-	# 	for j in range(lwe[i].size):
-	# 		for k in range(lwe[i][j].size):
-	# 			print(lwe[i][j][k])
-	with open(source_name + ".csv", "a", newline="") as target:
+	with open(current_dir + source_name + ".csv", "a", newline="") as target:
 		writer = csv.writer(target)
 		writer.writerow(("Latitude", "Longitude", "LWE"))
 		for i in range(len(lat)):
@@ -35,6 +32,7 @@ def readNC(file_path, lat_max, lat_min, lon_max, lon_min):
 					# print((lat[i], lon[j]))
 		
 	target.close()
+	file.close()
 	
 
 	
@@ -46,14 +44,3 @@ if __name__ == "__main__":
 	# South African latitude and longitude bounding box
 	lat_max, lat_min, lon_max, lon_min = -47, -22, 38.5, 16.5
 	readNC(file_path, lat_max, lat_min, lon_max, lon_min)
-	# file_obj = nc.Dataset(file_path)
-	# print(file_obj.variables.keys())
-	# lwe_arr = file_obj.variables["lwe_thickness"][:]
-	# # print(lwe_arr.shape)
-	# print(lwe_arr)
-	# time_arr = file_obj.variables["time"]
-	# # print(time_arr)
-	# time = nc.num2date(time_arr[:],time_arr.units)
-	# print(time)
-
-	# file_obj.close()
