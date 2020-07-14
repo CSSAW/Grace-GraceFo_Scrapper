@@ -5,7 +5,7 @@ import podaac.drive as pd
 
 p = podaac.Podaac()
 u = utils.PodaacUtils()
-drive = pd.Drive(file="podaac.ini", username="qinz", password="1y@0g8BKgJUkTBCq@9N", webdav_url="https://podaac-tools.jpl.nasa.gov/drive/files")
+drive = pd.Drive(file="podaac.ini", webdav_url="https://podaac-tools.jpl.nasa.gov/drive/files")
 
 data_var = p.dataset_variables(dataset_id='PODAAC-GFLND-3AJ63')
 print(data_var)
