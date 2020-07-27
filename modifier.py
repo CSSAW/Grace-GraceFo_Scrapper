@@ -19,8 +19,8 @@ with open("lwe_data.csv", "r") as csv_file:
         if len(date[1]) == 1:
           date[1] = "0" + date[1]
         dd = date[1]
-        date = [yyyy, mm]
-        rowx[i] = "-".join(date)
+        date = [yyyy, mm, dd]
+        rowx[i] = "".join(date)
       all_rows.append(rowx)
     else:
       all_rows.append(row)
