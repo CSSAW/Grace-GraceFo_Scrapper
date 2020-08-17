@@ -46,12 +46,12 @@ gracefo_csv = sorted([file_name for file_name in os.listdir(gracefo_data)])
 # print(grace_csv)
 # print(gracefo_csv)
 
-final_file = directory + "/unmerged_lwe.csv"
-
+final_file = directory + "/IDed_lwe.csv"
+id_count = 1
 with open(final_file, "w") as final_csv:
   csv_writer = csv.writer(final_csv)
   # write in header
-  csv_writer.writerow(["Latitude", "Longitude", "LWE_Data", "Date"])
+  csv_writer.writerow(["id", "Latitude", "Longitude", "LWE_Data", "Date"])
   # traverse all csv files for grace
   for file in grace_csv:
     # open each one and read
@@ -68,8 +68,10 @@ with open(final_file, "w") as final_csv:
           # eliminate rows with null data
           if row[2] != "--":
             # print(row)
+            row.insert(0, id_count)
             csv_writer.writerow(row)
-        counter += 1 
+            id_count += 1
+        counter += 1
     current_csv.close()
         
   for file in gracefo_csv:
@@ -84,7 +86,9 @@ with open(final_file, "w") as final_csv:
           row[3] = "".join(row[3].split("-"))
           # eliminate rows with null data
           if row[2] != "0.00000":
+            row.insert(0, id_count)
             csv_writer.writerow(row)
+            id_count += 1
         counter += 1
     current_csv.close()
 final_csv.close()
